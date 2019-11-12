@@ -1,0 +1,2 @@
+verilog work ../../clk_100MHZ_to_25M_24M.v
+verilog work ../example_design/clk_100MHZ_to_25M_24M_exdes.v

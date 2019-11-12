@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-11-12T15:33:18</DateModified>
+  <DateModified>2019-11-12T15:33:20</DateModified>
   <ModuleName>test_cam</ModuleName>
-  <SummaryTimeStamp>2019-11-04T13:15:59</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Julian Pulido/Documents/GitHub/work02-captura-datos-0v7670-grupo-01/hdl/iseconfig/test_cam.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Julian Pulido/Documents/GitHub/work02-captura-datos-0v7670-grupo-01/hdl\</ImplementationReportsDirectory>
-  <DateInitialized>2019-11-04T13:14:13</DateInitialized>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Julian Pulido/Documents/GitHub/work02-captura-datos-0v7670-grupo-01/CamNexys4/iseconfig/test_cam.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Julian Pulido/Documents/GitHub/work02-captura-datos-0v7670-grupo-01/CamNexys4\</ImplementationReportsDirectory>
+  <DateInitialized>2019-11-12T15:16:29</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
