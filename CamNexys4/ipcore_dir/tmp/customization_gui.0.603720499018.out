@@ -100,7 +100,7 @@ SET_PARAMETER Clkout7_Requested_Phase 0.000
 SET_PARAMETER Clkout7_Requested_Duty_Cycle 50.000
 SET_PARAMETER Use_Max_I_Jitter false
 SET_PARAMETER Use_Min_O_Jitter false
-SET_PARAMETER Prim_Source Single_ended_clock_capable_pin
+SET_PARAMETER Prim_Source Global_buffer
 SET_PARAMETER Use_Inclk_Switchover false
 SET_PARAMETER secondary_port CLK_IN2
 SET_PARAMETER Secondary_Source Single_ended_clock_capable_pin
@@ -276,7 +276,7 @@ SET_SIM_PARAMETER c_prim_in_freq 100.000
 SET_SIM_PARAMETER c_in_freq_units Units_MHz
 SET_SIM_PARAMETER c_secondary_in_freq 100.000
 SET_SIM_PARAMETER c_feedback_source FDBK_AUTO
-SET_SIM_PARAMETER c_prim_source Single_ended_clock_capable_pin
+SET_SIM_PARAMETER c_prim_source Global_buffer
 SET_SIM_PARAMETER c_secondary_source Single_ended_clock_capable_pin
 SET_SIM_PARAMETER c_clkfb_in_signaling SINGLE
 SET_SIM_PARAMETER c_use_reset 1

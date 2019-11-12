@@ -79,7 +79,7 @@ module clk_100MHZ_to_25M_24M
 
   // Input buffering
   //------------------------------------
-  IBUFG clkin1_buf
+  BUFG clkin1_buf
    (.O (clkin1),
     .I (CLK_IN1));
 
