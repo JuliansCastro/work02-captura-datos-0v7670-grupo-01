@@ -39,10 +39,10 @@ module test_cam(
 );
 
 // TAMAÑO DE ADQUISICIÓN DE LA CAMARA 
-parameter CAM_SCREEN_X = 160;
-parameter CAM_SCREEN_Y = 120;
+parameter CAM_SCREEN_X = 320;
+parameter CAM_SCREEN_Y = 240;
 
-localparam AW = 15; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
+localparam AW = 17; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
 localparam DW = 8;
 
 // El color es RGB 332
