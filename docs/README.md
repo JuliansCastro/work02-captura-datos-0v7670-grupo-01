@@ -29,3 +29,5 @@ de esta forma al tiempo que hacemos la captura de datos estamos haciendo la conv
 En este proceso se cambió el clock de entrada de 32 MHz por uno de 100 MHz ya que la fpga que estamos usando para este proyecto es la Nexys 4 y tiene un clock interno de 100 Mhz.
 
 Los cambios realizados se pueden evidenciar en la carpeta camNexys4 el archivo clk_100MHZ_to_25M_24M_.v
+###PUEBA DEL TAMAÑO DE LA FOTO
+![archivo base .men!](/home/sruizt/project/work02-captura-datos-0v7670-grupo-01/docs/figs "archivo base .men")
