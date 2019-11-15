@@ -16,8 +16,8 @@
 						assign data_in[1:0]={Data[4:3]};
 						contador=0;
 						end
+				end
 			end
-		end
 
 		end
 
