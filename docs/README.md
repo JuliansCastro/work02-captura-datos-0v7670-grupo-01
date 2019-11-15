@@ -3,8 +3,8 @@
 
 wire contador=0;
 always @ (negedge Pclk) begin
-	if	(Vsync==0) begin
-		if    (Href==1) begin
+	*if	(Vsync==0) begin
+       **if    (Href==1) begin
 			if	(contador==0)begin
 			assign data_in[7:5]={Data[7:5]};
 			assign data_in[4:2]={Data[2:0]};
