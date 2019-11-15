@@ -75,7 +75,7 @@ NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_
 #NET "btnCpuReset"		LOC = "C12"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L3P_T0_DQS_AD1P_15,				Sch name = CPU_RESET
 NET "rst"				LOC = "E16"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L11N_T1_SRCC_15,					Sch name = BTNC
 #NET "btnU"				LOC = "F15"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L14P_T2_SRCC_15,					Sch name = BTNU
-#NET "btnL"				LOC = "T16"	| IOSTANDARD = "LVCMOS33";		#Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
+#NET "btnL"	 		LOC = "T16"	| IOSTANDARD = "LVCMOS33";		#Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
 #NET "btnR"				LOC = "R10"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_25_14,							Sch name = BTNR
 #NET "btnD"				LOC = "V10"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L21P_T3_DQS_14,					Sch name = BTND
  
@@ -100,9 +100,9 @@ NET "rst"				LOC = "E16"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L
 #NET "JB<7>"			LOC = "U11"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L19N_T3_A09_D25_VREF_14,			Sch name = JB10 
  
 ## Pmod Header JC
-#NET "JC<0>"			LOC = "K2"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L23P_T3_35,						Sch name = JC1
-#NET "JC<1>"			LOC = "E7"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L6P_T0_35,						Sch name = JC2
-#NET "JC<2>"			LOC = "J3"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L22P_T3_35,						Sch name = JC3
+NET "CAM_xclk"			LOC = "K2"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L23P_T3_35,						Sch name = JC1
+NET "CAM_pwdn"			LOC = "E7"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L6P_T0_35,						Sch name = JC2
+NET "CAM_reset"			LOC = "J3"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L22P_T3_35,						Sch name = JC3
 #NET "JC<3>"			LOC = "J4"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L21P_T3_DQS_35,					Sch name = JC4
 #NET "JC<4>"			LOC = "K1"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L23N_T3_35,						Sch name = JC7
 #NET "JC<5>"			LOC = "E6"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L5P_T0_AD13P_35,					Sch name = JC8
