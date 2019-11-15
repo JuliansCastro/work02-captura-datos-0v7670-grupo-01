@@ -32,3 +32,9 @@ Los cambios realizados se pueden evidenciar en la carpeta camNexys4 el archivo c
 ### PUEBA DEL TAMAÑO DE LA FOTO
 
 ![archivo base .men!]( /docs/figs/código_base_prueba_tamaño_foto.jpeg "archivo base .men")
+inicialmente se realizó uan prueba para saber si als adapataciones hechas al código funcionaron, para ello se utilizó el mismo "color" que el profesor 
+nos dio en el archivo .men, como se evidencia en esta imagen del monitor, las adaptaciones son exitosas y funciona el cargar la imagen del archivo .men
+a la memoria.
+
+posteriormente decicidoms llenar toda la memoria de un color sólido (Rojo), y únicamente dejar un recuadro de 320x240 píxeles que corresponde al tamaño de la foto, esto lo realizamos para tener un acercamiento con el funcionamiento de la pantalla VGA, gracias a este acercamiento pudimos evidenciar que la memoria en ciertos casos se suele llenar automáticamente con e color del último píxel descrito en el archivo .men, debido a esto tomamos la decisión de llenar toda la memoria como ya se menicionó, de color rojo y posteriormente crear el recuadro blanco correspondiente al tamaño de la foto.
+![archivo .men!]( /docs/figs/prueba_tamaño_foto.jpeg "archivo .men")
