@@ -47,6 +47,6 @@ para la configuración de la cámara se utilizó un arduino uno, jumpers y la ay
 
 en la siguiente imagen podemos observar el error evidenciado en una de las pruebas:  
 
-![error.men!]( /docs/figs/error.jpeg "error .men")
+![error.men!]( /docs/figs/error.jpg "error.men")
 
 
