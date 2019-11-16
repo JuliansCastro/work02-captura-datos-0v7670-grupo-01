@@ -33,7 +33,7 @@ module Captura(
 always @ (negedge Pclk) begin
 	if	(Vsync==0) begin
 		if	(Href==1) begin
-		w=1;
+		w=0;
 			if	(contador==0)begin
 				data_in[7]=Data[7];
 				data_in[6]=Data[6];
@@ -47,7 +47,8 @@ always @ (negedge Pclk) begin
 				data_in[1]=Data[4];
 				data_in[0]=Data[3];
 				contador=0;
-				w=0;
+				w=1;
+				addr_in<=addr;
 				addr=addr+1;
 			end
 		end
