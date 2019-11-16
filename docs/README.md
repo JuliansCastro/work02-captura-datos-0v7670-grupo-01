@@ -4,24 +4,31 @@
 y el verde(G), y si se encuentra el contador en estado 1, tomar los datos del color azul(blue), y para ahorrarnos algunos procesos intermedios llenaremos la salida (data in [7:0]) de la siguiente forma:  
 
 
-		wire contador=0;  
-		always @ (negedge Pclk) begin  
-			if	(Vsync==0) begin  
-
-				if    (Href==1) begin  
-					if	(contador==0)begin
-					assign data_in[7:5]={Data[7:5]};
-					assign data_in[4:2]={Data[2:0]};
-					contador=1;
-					end
-						if	(contador==1)begin
-						assign data_in[1:0]={Data[4:3]};
-						contador=0;
-						end
-				end
+	 reg contador=1'b0;
+	 reg [16:0]addr=0;
+always @ (negedge Pclk) begin
+	if	(Vsync==0) begin
+		if	(Href==1) begin
+		regWrite=0;
+			if	(contador==0)begin
+				data_in[7]=Data[7];
+				data_in[6]=Data[6];
+				data_in[5]=Data[5];
+				data_in[4]=Data[2];
+				data_in[3]=Data[1];
+				data_in[2]=Data[0];
 			end
-
+			if	(contador==1)begin
+				data_in[1]=Data[4];
+				data_in[0]=Data[3];
+				regWrite=1;
+				addr_in<=addr;
+				addr=addr+1;
+			end
+		contador=contador+1;
 		end
+	end
+end
 
 de esta forma al tiempo que hacemos la captura de datos estamos haciendo la conversión de 565 a 332 (RGB), ahorramos un tiempo de procesamiento y reducimos un proceso largo a una máquina de dos estados, y esta máquina repetirá sus procesos hasta completar la totalidad de píxeles de la imágen.
 
