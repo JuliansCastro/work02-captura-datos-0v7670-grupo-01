@@ -28,6 +28,9 @@ de esta forma al tiempo que hacemos la captura de datos estamos haciendo la conv
 El bloque estructural para el módulo de captura de datos es el siguiente:
 ![archivo base .men!]( /docs/figs/Bloque_Captura.png "archivo base .men")
 
+La siguiente figura representa el bloque funcional para dicho módulo:
+![archivo base .men!]( /docs/figs/Bloque_Funcional_Captura.png "archivo base .men")
+
 3. Se generó un nuevo PLL con Clocking Wizard. en el IDE de ISE utilizando tools -> Core Generator ... y se generó el ip con Clocking Wizard.
 
 En este proceso se cambió el clock de entrada de 32 MHz por uno de 100 MHz ya que la fpga que estamos usando para este proyecto es la Nexys 4 y tiene un clock interno de 100 Mhz.
