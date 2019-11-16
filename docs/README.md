@@ -47,6 +47,10 @@ para la configuración de la cámara se utilizó un arduino uno, jumpers y la ay
 
 en la siguiente imagen podemos observar el error evidenciado en una de las pruebas:  
 
-![error.men!]( /docs/figs/error.jpeg "error .men")
+![error.men!]( /docs/figs/error.jpg "error.men")
+
+### ¿QUÉ FALTA PARA IMPLEMENTAR PARA TENER DE LA TOMA DE FOTOS?
+
+Determinamos que para tener control total hace falta agregar un botón que nos permita realizar la captura de la foto, es decir, al presionarlo se accione el sistema de captura instantanea de lo que esté frente a la cámara para así guardar la imagen como tal y no esté cosntantemente capturando nuevos datos. 
 
 
