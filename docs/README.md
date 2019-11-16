@@ -42,9 +42,11 @@ posteriormente decicidoms llenar toda la memoria de un color sólido (Rojo), y �
 ![archivo .men!]( /docs/figs/prueba_tamaño_foto.jpeg "archivo .men")
 NOTA:revisar el archivo UCF anexo para realizar estas pruebas
 
-###CONFIGURACIÓN DE LA CAMARA 
+### CONFIGURACIÓN DE LA CAMARA 
 para la configuración de la cámara se utilizó un arduino uno, jumpers y la ayuda de un código encontrado en internet, no fue posible realizar muchas pruebas pero dentro de las que se realizaron no se obtuvieron los resultados esperado, dado que se esperaba la observación de video en un tamaño 320x240, pero lo únco que se pudo observar en repetidas ocasiones fue que el recuadro de 320x240 estaba capturando solo ruido y estaba recopilando información de forma erronea, se llega a la conclsión de que es necesario revisar en primera instancia la conexión de la cámara y posteriormente el código utilizado para su configuración, pero por razones de tiempo las actualizaciones de la reparación de estos errores sera evidenciada más adelante la próxima semana.
 
 en la siguiente imagen podemos observar el error evidenciado en una de las pruebas:  
+
+![error.men!]( /docs/figs/error.jpeg "error .men")
 
 
