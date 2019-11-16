@@ -21,7 +21,10 @@
 module test_cam(
     input wire clk,           // board clock: 32 MHz 
     input wire rst,         	// reset button
-
+	 input [7:0] CAM_data,		//Datos que ingresan
+    input wire CAM_vsync,			//Indica cuando empieza y termina la transmision de datos de una imagen
+    input wire CAM_href,				//Indica cuando empieza y termina la transmision de datos de una fila de la imagen
+    input wire CAM_pclk,				//Indica como es la division de una fila byte a byte
 	// VGA input/output  
     output wire VGA_Hsync_n,  // horizontal sync output
     output wire VGA_Vsync_n,  // vertical sync output
@@ -106,8 +109,22 @@ clk_100MHZ_to_25M_24M
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
+/* ****************************************************************************
+Captura usa las señales Vsync, Href y Pclk para saber cuando ingresa un byte de 
+la camara, transforma el formato de la imagen de RGB565 a RGB332 y le envia a 
+buffer_ram_dp el dato que se quiere guarda con su respectiva direccion
+**************************************************************************** */
+Captura datos332(
+    .Data(CAM_data),
+    .Href(CAM_href),
+    .Vsync(CAM_vsync),
+    .Pclk(CAM_pclk),
+	 
+    .regWrite(DP_RAM_regW),
+    .addr_in(DP_RAM_addr_in),
+	 .data_in(DP_RAM_data_in)
 
-
+);
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  segÃºn los calculos realizados en el Wp01

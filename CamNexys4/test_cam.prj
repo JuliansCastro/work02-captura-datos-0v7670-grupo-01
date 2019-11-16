@@ -1,4 +1,5 @@
 verilog work "../hdl/src/VGA_driver.v"
 verilog work "../hdl/src/buffer_ram_dp.v"
 verilog work "ipcore_dir/clk_100MHZ_to_25M_24M.v"
+verilog work "Captura.v"
 verilog work "../hdl/src/test_cam.v"

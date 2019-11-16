@@ -32,12 +32,29 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock CAM_pclk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CAM_data<0> |   -1.034(F)|      FAST  |    3.080(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<1> |   -1.118(F)|      FAST  |    3.182(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<2> |   -1.029(F)|      FAST  |    3.092(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<3> |   -1.005(F)|      FAST  |    3.051(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<4> |   -0.752(F)|      FAST  |    2.750(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<5> |   -1.060(F)|      FAST  |    3.120(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<6> |   -0.994(F)|      FAST  |    3.113(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_data<7> |   -0.917(F)|      FAST  |    3.022(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_href    |   -0.100(F)|      FAST  |    2.316(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+CAM_vsync   |   -0.082(F)|      FAST  |    2.259(F)|      SLOW  |CAM_pclk_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
 Setup/Hold to clock clk
 ------------+------------+------------+------------+------------+------------------+--------+
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rst         |    1.053(R)|      FAST  |    0.774(R)|      SLOW  |clk25M            |   0.000|
+rst         |    1.061(R)|      FAST  |    0.840(R)|      SLOW  |clk25M            |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,24 +62,33 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-VGA_B<2>    |        12.862(R)|      SLOW  |         4.240(R)|      FAST  |clk25M            |   0.000|
-VGA_B<3>    |        13.013(R)|      SLOW  |         4.600(R)|      FAST  |clk25M            |   0.000|
-VGA_G<1>    |        13.443(R)|      SLOW  |         4.562(R)|      FAST  |clk25M            |   0.000|
-VGA_G<2>    |        13.170(R)|      SLOW  |         4.378(R)|      FAST  |clk25M            |   0.000|
-VGA_G<3>    |        13.587(R)|      SLOW  |         4.311(R)|      FAST  |clk25M            |   0.000|
-VGA_Hsync_n |        11.485(R)|      SLOW  |         4.329(R)|      FAST  |clk25M            |   0.000|
-VGA_R<1>    |        12.877(R)|      SLOW  |         4.198(R)|      FAST  |clk25M            |   0.000|
-VGA_R<2>    |        13.332(R)|      SLOW  |         4.258(R)|      FAST  |clk25M            |   0.000|
-VGA_R<3>    |        14.182(R)|      SLOW  |         4.463(R)|      FAST  |clk25M            |   0.000|
-VGA_Vsync_n |        12.104(R)|      SLOW  |         4.620(R)|      FAST  |clk25M            |   0.000|
+VGA_B<2>    |        12.886(R)|      SLOW  |         4.367(R)|      FAST  |clk25M            |   0.000|
+VGA_B<3>    |        13.360(R)|      SLOW  |         4.316(R)|      FAST  |clk25M            |   0.000|
+VGA_G<1>    |        13.338(R)|      SLOW  |         4.429(R)|      FAST  |clk25M            |   0.000|
+VGA_G<2>    |        13.386(R)|      SLOW  |         4.379(R)|      FAST  |clk25M            |   0.000|
+VGA_G<3>    |        13.255(R)|      SLOW  |         4.396(R)|      FAST  |clk25M            |   0.000|
+VGA_Hsync_n |        11.491(R)|      SLOW  |         4.398(R)|      FAST  |clk25M            |   0.000|
+VGA_R<1>    |        13.582(R)|      SLOW  |         4.241(R)|      FAST  |clk25M            |   0.000|
+VGA_R<2>    |        13.371(R)|      SLOW  |         4.470(R)|      FAST  |clk25M            |   0.000|
+VGA_R<3>    |        13.725(R)|      SLOW  |         4.046(R)|      FAST  |clk25M            |   0.000|
+VGA_Vsync_n |        11.878(R)|      SLOW  |         4.276(R)|      FAST  |clk25M            |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CAM_pclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_pclk       |         |         |         |    1.825|
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.364|         |         |         |
+CAM_pclk       |         |    6.275|         |         |
+clk            |    6.922|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -73,14 +99,14 @@ clk            |CAM_xclk       |    8.298|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Nov 15 19:33:49 2019 
+Analysis completed Sat Nov 16 02:31:45 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 412 MB
+Peak Memory Usage: 414 MB
 
 
 
