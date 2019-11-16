@@ -1,0 +1,5 @@
+verilog work "VGA_driver.v"
+verilog work "ipcore_dir/clk_100MHZ_to_25M_24M.v"
+verilog work "Captura.v"
+verilog work "buffer_ram_dp.v"
+verilog work "test_cam.v"

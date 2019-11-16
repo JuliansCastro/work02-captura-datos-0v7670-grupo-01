@@ -1,0 +1,20 @@
+Release 14.6 - netgen P.68d (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim test_cam.ngc test_cam_synthesis.v  
+
+Reading design 'test_cam.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file 'C:\Users\Julian
+Pulido\Documents\GitHub\work02-captura-datos-0v7670-grupo-01\hdl\netgen\synthesi
+s\test_cam_synthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 145112 kilobytes
